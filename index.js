@@ -12,26 +12,30 @@ closer.addEventListener('click', function () {
 
 const plus = document.querySelector('#plus');
 const minus = document.querySelector('#minus');
-const amount = document.querySelector('#amount');
+const amount = document.querySelectorAll('.amount');
 let num = 0;
 
 plus.addEventListener('click', function () {
     num++
-    amount.innerHTML = num
+    amount.forEach((amount) => {
+        amount.innerHTML = num
+    })
 })
 
 
 minus.addEventListener('click', function () {
     if (num === 0) {
-        return null
+        return null;
     }
-    num--
-    amount.innerHTML = num
+    num--;
+    amount.forEach((amount) => {
+        amount.innerHTML = num
+    })
 })
 
 const cart = document.querySelector('#cart');
 const cartOut = document.querySelector('#cart-out')
 
-cart.addEventListener('click', function(){
+cart.addEventListener('click', function () {
     cartOut.classList.toggle('show')
 })
