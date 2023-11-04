@@ -116,6 +116,10 @@ a:hover::after {
     transform: scale(1);
 }
 
+#cart{
+    cursor: pointer;
+}
+
 #line {
     height: 1px;
     background-color: var(--Grayish-blue);
@@ -274,6 +278,7 @@ span {
 }
 
 #cart-out{
+    display: none;
     position: absolute;
     width: 18rem;
     height: 12rem;
@@ -284,6 +289,20 @@ span {
     border-radius: 6px;
     box-shadow: 0 20px 40px rgba(82, 81, 81, 0.075);
     background-color: var(--White);
+}
+
+#output{
+    font-weight: 600;
+    color: var(--Dark-grayish-blue);
+    display: flex;
+    padding: 3rem 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#cart-out.show{
+    display: block;
 }
 
 .line{

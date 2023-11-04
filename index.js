@@ -28,3 +28,10 @@ minus.addEventListener('click', function () {
     num--
     amount.innerHTML = num
 })
+
+const cart = document.querySelector('#cart');
+const cartOut = document.querySelector('#cart-out')
+
+cart.addEventListener('click', function(){
+    cartOut.classList.toggle('show')
+})
